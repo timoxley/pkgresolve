@@ -51,6 +51,10 @@ hierarchy. `pkgresolve` is a more robust method.
 This intentially breaks the encapsulation provided by node/npm's
 module system. Don't use this unless you have to.
 
+## See Also
+
+* [sindresorhus/resolve-from](https://github.com/sindresorhus/resolve-from)
+
 # License
 
 MIT
