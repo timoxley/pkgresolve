@@ -1,5 +1,7 @@
 # pkgresolve
 
+[![Build Status](https://travis-ci.org/timoxley/pkgresolve.svg)](https://travis-ci.org/timoxley/pkgresolve)
+
 Resolve a dependency from within the context of another package.
 
 Useful for hacks, monkeypatching or wrappers that require
