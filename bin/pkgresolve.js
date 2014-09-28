@@ -21,8 +21,8 @@ function usage() {
   console.error('')
   console.error('Usage: pkgresolve [-g, --global] <parent> <child>')
   console.error('')
-  console.error('  pkgresolve tape glob              # resolve package "glob" parentName local "tape"')
-  console.error('  pkgresolve --global npm npmconf   # resolve "npmconf" parentName global "npm"')
+  console.error('  pkgresolve tape glob              # resolve package "glob" from local "tape"')
+  console.error('  pkgresolve --global npm npmconf   # resolve "npmconf" from global "npm"')
   console.error('')
 }
 
