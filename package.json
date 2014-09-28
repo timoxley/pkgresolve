@@ -6,12 +6,28 @@
   "scripts": {
     "test": "tape test/*.js"
   },
-  "keywords": ["npm", "dependency", "require", "relative", "path"],
+  "keywords": [
+    "npm",
+    "dependency",
+    "require",
+    "relative",
+    "path"
+  ],
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "tape": "~3.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timoxley/pkgresolve.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timoxley/pkgresolve/issues"
+  },
+  "homepage": "https://github.com/timoxley/pkgresolve"
 }
