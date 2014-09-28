@@ -1,0 +1,17 @@
+{
+  "name": "pkgresolve",
+  "version": "1.0.0",
+  "description": "Resolve a dependency of another package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "keywords": ["npm", "dependency", "require", "relative", "path"],
+  "author": "Tim Oxley <secoif@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "~3.0.0"
+  },
+  "dependencies": {
+  }
+}
