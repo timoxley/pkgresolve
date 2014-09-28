@@ -25,17 +25,26 @@ test('can resolve package from locally installed package', function(t) {
   })
 })
 
-test('gets nully value if cannot find package', function(t) {
+test('gets nully value if cannot find child package', function(t) {
   resolve('asdasdasd').fromGlobal('npm', function(err, path) {
     t.ifError(err)
-    t.ok(path == null) // loose equal
+    t.ok(path == null)
+    t.end()
+  })
+})
+
+test('gets nully value if cannot find parent package', function(t) {
+  resolve('tape').from('blah', function(err, path) {
+    t.ifError(err)
+    t.ok(path == null)
     t.end()
   })
 })
 
 test('cannot achieve command injection', function(t) {
   resolve('through').from('tape echo ""; pwd #', function(err, path) {
-    t.ok(err)
+    t.ifError(err)
+    t.ok(path == null)
     t.end()
   })
 })

@@ -28,6 +28,16 @@ resolve('npmconf').fromGlobal('npm', function(err, pkgPath) {
 })
 ```
 
+## CLI
+
+```js
+# Resolve 'through' from locally installed 'tape'
+pkgresolve tape through
+
+# Resolve 'npmconf' from globally installed 'npm'
+pkgresolve --global npm npmconf
+```
+
 ### Why not `require('parent/node_modules/child')`?
 
 Due to deduplication, `child` is not guaranteed to exist at that

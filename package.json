@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Resolve a dependency of another package.",
   "main": "index.js",
+  "bin": {
+    "pkgresolve": "bin/pkgresolve.js"
+  },
   "scripts": {
     "test": "tape test/*.js"
   },
@@ -18,7 +21,9 @@
   "devDependencies": {
     "tape": "~3.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "minimist": "~1.1.0"
+  },
   "directories": {
     "test": "test"
   },

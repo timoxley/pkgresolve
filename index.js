@@ -5,15 +5,15 @@ var execFile = require('child_process').execFile
 module.exports = function(pkgName) {
   return {
     from: function from(from, fn) {
-      return module.exports._resolveFrom(from, pkgName, false, fn)
+      return module.exports._resolve(from, pkgName, false, fn)
     },
     fromGlobal: function fromGlobal(from, fn) {
-      return module.exports._resolveFrom(from, pkgName, true, fn)
+      return module.exports._resolve(from, pkgName, true, fn)
     }
   }
 }
 
-module.exports._resolveFrom = function resolveFrom(from, pkgName, useGlobal, fn) {
+module.exports._resolve = function _resolve(from, pkgName, useGlobal, fn) {
   var cmd = "npm"
   var args = [
     'explore',
@@ -25,7 +25,8 @@ module.exports._resolveFrom = function resolveFrom(from, pkgName, useGlobal, fn)
   ]
 
   execFile(cmd, args, function(err, pkgPath) {
-    if (err) return fn(err)
+    if (err) return fn(null, null)
+    pkgPath = pkgPath || ''
     pkgPath = pkgPath.trim()
     if (!pkgPath) return fn(null, null)
     return fn(null, pkgPath)
