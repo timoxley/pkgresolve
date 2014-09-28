@@ -31,7 +31,7 @@ resolve('npmconf').fromGlobal('npm', function(err, pkgPath) {
 
 ## CLI
 
-```
+```coffeescript
 # Resolve 'through' from locally installed 'tape'
 pkgresolve tape through
 
