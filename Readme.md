@@ -42,8 +42,8 @@ pkgresolve --global npm npmconf
 ### Why not `require('parent/node_modules/child')`?
 
 Due to deduplication, `child` is not guaranteed to exist at that
-location. You don't even need to call `npm dedupe` for this to happen
-- npm will not install something that is already installed in the
+location. You don't even need to call `npm dedupe` for this to happen –
+npm will not install something that is already installed in the
 hierarchy. `pkgresolve` is a more robust method.
 
 ### Use Responsibly.
