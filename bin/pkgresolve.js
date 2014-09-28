@@ -4,7 +4,9 @@
 
 var resolve = require('../')
 
-var argv = require('minimist')(process.argv.slice(2))
+var argv = require('minimist')(process.argv.slice(2), {
+  boolean: ['g', 'global']
+})
 
 var parentName = argv._[0]
 var packageName = argv._[1]
@@ -17,7 +19,7 @@ if (!parentName || !packageName) {
 
 function usage() {
   console.error('')
-  console.error('Usage: pkgresolve <parent> <child>')
+  console.error('Usage: pkgresolve [-g, --global] <parent> <child>')
   console.error('')
   console.error('  pkgresolve tape glob              # resolve package "glob" parentName local "tape"')
   console.error('  pkgresolve --global npm npmconf   # resolve "npmconf" parentName global "npm"')
@@ -30,7 +32,7 @@ resolve._resolve(parentName, packageName, useGlobal, function(err, path) {
     console.error(err.message)
   }
   if (!path) {
-    console.error('Not found %s in %s.', packageName, parentName)
+    console.error('Not found %s in %s %s.', packageName, useGlobal ? 'global' : 'local', parentName)
     process.exit(1)
   }
   console.info(path)
