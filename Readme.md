@@ -1,12 +1,11 @@
 # pkgresolve
 
+### Resolve a dependency from within the context of another package.
+
 [![Build Status](https://travis-ci.org/timoxley/pkgresolve.svg)](https://travis-ci.org/timoxley/pkgresolve)
 
-Resolve a dependency from within the context of another package.
-
 Useful for hacks, monkeypatching or wrappers that require
-manipulation of
-the exact dependency that would be loaded by a package.
+manipulation of the exact dependency that would be loaded by a package.
 
 ## Installation
 
