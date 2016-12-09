@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-"use strict"
+'use strict'
 
 var resolve = require('../')
 
@@ -17,7 +17,7 @@ if (!parentName || !packageName) {
   process.exit(1)
 }
 
-function usage() {
+function usage () {
   console.error('')
   console.error('Usage: pkgresolve [-g, --global] <parent> <child>')
   console.error('')
@@ -26,7 +26,7 @@ function usage() {
   console.error('')
 }
 
-resolve._resolve(parentName, packageName, useGlobal, function(err, path) {
+resolve._resolve(parentName, packageName, useGlobal, function (err, path) {
   if (err) {
     console.trace()
     console.error(err.message)
